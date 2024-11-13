@@ -41,8 +41,8 @@ class _HomePageState extends State<HomePage> {
 
     final isCnpj = queryParam.length == 14;
     final url = isCnpj
-        ? 'http://localhost/api-flutter/controle.php?getEmpresa&cnpj=$queryParam'
-        : 'http://localhost/api-flutter/controle.php?getPessoa&cpf=$queryParam';
+        ? 'http://localhost/Api-Flutter/api/controle.php?getEmpresa&cnpj=$queryParam'
+        : 'http://localhost/Api-Flutter/api/controle.php?getPessoa&cpf=$queryParam';
 
     try {
       http.Response response = await http.get(Uri.parse(url));
